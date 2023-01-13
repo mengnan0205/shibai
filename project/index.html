@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>猛男养成日记</title>
+  <style>
+    body {
+      margin: 0px;
+      background-color: #dbdbdb;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: right;
+    }
+
+    li a,
+    .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #111;
+      color: red;
+    }
+
+    li.dropdown {
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #111;
+    }
+
+    .dropdown:hover .dropdown-content {
+      z-index: 9999;
+      display: block;
+    }
+
+    .l1 {
+      float: left;
+    }
+
+    li a,
+    .l2 {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover,
+    .l1:hover .l2 {
+      color: red;
+      background-color: #111;
+    }
+
+    li.l1 {
+      display: inline-block;
+    }
+
+    .l1-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .l1-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .l1-content a:hover {
+      background-color: #111;
+    }
+
+    .l1:hover .l1-content {
+      z-index: 9999;
+      display: block;
+    }
+
+    header h1 {
+      text-align: center;
+      font-size: 50px;
+      color: rgb(255, 255, 255);
+    }
+
+    div.relative {
+      position: relative;
+      max-width: 100%;
+    }
+
+    div.absolute {
+      position: absolute;
+      top: 30%;
+      right: 26%;
+    }
+
+    footer {
+      margin: 0px;
+      margin-top: 2px;
+      background-color: white;
+    }
+
+    footer div.footer {
+      margin: 0px;
+    }
+
+    footer.footer,
+    a {
+      margin-top: 2px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+    }
+
+    footer.footer,
+    a:hover {
+      color: #f1b8e4;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="home">
+    <nav>
+      <ul>
+        <li class="l1">
+          <a href="javascript:void(0)" class="l2">用户</a>
+          <div class="l1-content">
+            <a href="login.html#form2">登录</a>
+            <a href="login.html#form1">注册</a>
+          </div>
+        </li>
+        <li><a href="fitness.html#fitness">撸铁</a></li>
+        <li><a href="cate.html#cate">饮食</a></li>
+        <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">爱好</a>
+          <div class="dropdown-content">
+            <a href="健身动作.html#czk">健身动作</a>
+            <a href="movie.html#movie">电影</a>
+            <a href="basketball.html#basketball">篮球</a>
+          </div>
+        </li>
+        <li><a href="psychology.html#psychology">心态</a></li>
+        <li><a href="exercise.html#exercise">锻炼</a></li>
+        <li><a href="index.html#home">首页</a></li>
+      </ul>
+    </nav>
+    <img src="首页\首页.jpg" width="100%" class="relative">
+    <div class="absolute">
+      <h1>Wecome to the Beefcake site.</h1>
+      <h1>欢迎来到属于猛男的网站！</h1>
+    </div>
+  </header>
+  <main>
+
+  </main>
+  <footer>
+    <div class="footer"><a href="baogao.html#baogao">报告</a></div>
+    <div class="footer"><a href="意见栏.html">意见栏</a></div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猛男养成日记之心态</title>
+    <style>
+        body {
+            background-color: rgb(252, 224, 179);
+            margin: 0px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #111;
+            color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #111;
+        }
+
+        .dropdown:hover .dropdown-content {
+            z-index: 9999;
+            display: block;
+        }
+
+        .l1 {
+            float: left;
+        }
+
+        li a,
+        .l2 {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .l1:hover .l2 {
+            color: red;
+            background-color: #111;
+        }
+
+        li.l1 {
+            display: inline-block;
+        }
+
+        .l1-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .l1-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .l1-content a:hover {
+            background-color: #111;
+        }
+
+        .l1:hover .l1-content {
+            z-index: 9999;
+            display: block;
+        }
+
+        .box1 .open h3 {
+            color: rgb(245, 247, 248);
+            font-size: 100px;
+            position: relative;
+            top: 40px;
+            left: 90px;
+        }
+
+        .box1 .open h1 {
+            color: rgb(250, 251, 252);
+            font-size: 300px;
+            position: absolute;
+            left: 235px;
+            top: 85px;
+        }
+
+        .box2 {
+            margin-top: 750px;
+
+        }
+
+        .box2 .z1 h1 {
+            color: rgb(120, 133, 146);
+            text-align: center;
+
+        }
+
+        .w1 {
+            margin: auto 300px;
+        }
+
+        .box2 .z1 .w1 p {
+            color: rgb(120, 133, 146);
+
+            text-align: center;
+        }
+
+
+        .box2 .z2 h1 {
+            text-align: center;
+            color: rgb(120, 133, 146);
+
+        }
+
+        .w2 {
+            margin: auto 300px;
+        }
+
+        .box2 .z2 .w2 p {
+            color: rgb(120, 133, 146);
+
+            text-align: center;
+        }
+
+
+        .box2 .z3 h1 {
+            text-align: center;
+            color: rgb(120, 133, 146);
+
+        }
+
+        .w3 {
+            margin: auto 300px;
+        }
+
+        .box2 .z3 .w3 p {
+            color: rgb(120, 133, 146);
+
+            text-align: center;
+        }
+
+
+        .box2 .z4 h1 {
+            text-align: center;
+            color: rgb(120, 133, 146);
+
+        }
+
+        .w4 {
+            margin: auto 300px;
+        }
+
+        .box2 .z4 .w4 p {
+            color: rgb(120, 133, 146);
+
+            text-align: center;
+        }
+
+        .z1 {
+            margin-top: 90px;
+        }
+
+        .z2 {
+            margin-top: 200px;
+        }
+
+        .z3 {
+            margin-top: 200px;
+        }
+
+        .z4 {
+            margin-top: 200px;
+        }
+
+        .last {
+            text-align: center;
+            color: rgb(120, 133, 146);
+
+            margin-top: 100px;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+        .card {
+            position: relative;
+            width: 240px;
+            height: 350px;
+            margin: 10px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            color: rgb(120, 133, 146);
+
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+                0 2px 2px rgba(0, 0, 0, 0.1),
+                0 4px 4px rgba(0, 0, 0, 0.1),
+                0 8px 8px rgba(0, 0, 0, 0.1),
+                0 16px 16px rgba(0, 0, 0, 0.1);
+
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            width: 100%;
+            height: 110%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background-size: cover;
+            background-position: 0 0;
+
+            transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .card:nth-child(1)::before {
+            background-image: url(https://img0.baidu.com/it/u=4042019555,4003818687&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=334);
+        }
+
+        .card:nth-child(2)::before {
+            background-image: url(https://img2.baidu.com/it/u=908774007,2682809983&fm=253&fmt=auto&app=138&f=JPEG?w=375&h=500);
+        }
+
+        .card:nth-child(3)::before {
+            background-image: url(https://img0.baidu.com/it/u=3958253639,2674146937&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500);
+        }
+
+        .card:nth-child(4)::before {
+            background-image: url(https://img2.baidu.com/it/u=3038953646,1704847838&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=736);
+        }
+
+        .card::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 200%;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(0, 0, 0, 0.25) 55%,
+                    rgba(0, 0, 0, 0.8) 100%);
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateY(0);
+
+            transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .card .content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            padding: 16px 8px;
+            transform: translateY(76%);
+            transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .card h2 {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .card p {
+            font-size: 15px;
+            letter-spacing: 2px;
+            width: 80%;
+            line-height: 30px;
+            margin-top: 25px;
+
+            text-align: justify;
+        }
+
+        .card button {
+            cursor: pointer;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 25px;
+        }
+
+        .card button:hover {
+            background-color: #000;
+        }
+
+        .card .content *:not(h2) {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .card:hover {
+            align-items: center;
+        }
+
+        .card:hover::before {
+            transform: translateY(-5%);
+        }
+
+        .card:hover::after {
+            transform: translateY(-50%);
+        }
+
+        .card:hover .content {
+            transform: translateY(0);
+        }
+
+        .card:hover .content *:not(h2) {
+            opacity: 1;
+            transform: translateY(0);
+
+            transition-delay: 0.1s;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="psychology">
+        <nav>
+            <ul>
+                <li class="l1">
+                    <a href="javascript:void(0)" class="l2">用户</a>
+                    <div class="l1-content">
+                        <a href="login.html#form2">登录</a>
+                        <a href="login.html#form1">注册</a>
+                    </div>
+                </li>
+                <li><a href="fitness.html#fitness">撸铁</a></li>
+                <li><a href="cate.html#cate">饮食</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">爱好</a>
+                    <div class="dropdown-content">
+                        <a href="健身动作.html#czk">健身动作</a>
+                        <a href="movie.html#movie">电影</a>
+                        <a href="basketball.html#basketball">篮球</a>
+                    </div>
+                </li>
+                <li><a href="psychology.html#psychology">心态</a></li>
+                <li><a href="exercise.html#exercise">锻炼</a></li>
+                <li><a href="index.html#home">首页</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="box1">
+        <div class="open">
+            <h3>锻炼时的</h2>
+                <h1>心态</h1>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="z1">
+            <h1>一、切记不可着急</h1>
+            <div class="w1">
+                <p>刚开始锻炼的时候一定不能着急。有很多朋友是一锻炼就想马上见到效果，刚练完一两次，就想瘦多少斤，一称体重没变化或者还重了点就觉得运动没用，没了信心。其实这都是一种过于着急的心态，因为很多时候我们锻炼不会一两次就会看到效果，有时候反而会有一点体重的增加，这其实都是很正常的，我们要做的是让心态平静下来，接受缓慢变化的这个事实。
+                </p>
+            </div>
+        </div>
+
+        <div class="z2">
+            <h1>二、遵从身体的科学规律</h1>
+            <div class="w2">
+                <p>我们学过物理都知道，如果一个物体长期保持住某种状态，如果想要改变这种状态，要给他额外的做功，它才会产生变化，并且从一种状态到另外一种状态是需要一个过程。我们人的身体也一样，当从一个平时很少运动的身体状态，然后突然间转变到一个运动的状态，这期间是需要有一个过渡缓冲期。否则就会像汽车突然间撞到东西停下来一样，会产生巨大的冲击力，身体也一样，突然间超大运动量，超长的运动时间，会让身体一下子受到巨大压力，吃不消。前期运动的时候可以缓慢轻松一点来让身体适应这一个过程，这个过程期间不需要达到什么效果，只需要让身体动起来形成一个比较良好的习惯就已经可以了。
+
+                </p>
+            </div>
+        </div>
+
+        <div class="z3">
+            <h1>三、不必过多的担忧</h1>
+            <div class="w3">
+                <p>有的人会过度的担心运动让人受伤，其实身体没那么脆弱，你越使用它，它才会越来越强。然而前期运动的时候，产会的酸痛容易让人误以为受伤，产生自己不适合运动的错觉。这其实是过度担忧和不了解正常的身体规律导致的。
+
+                    通常情况下，在前期运动的时候，身体会产生酸痛感。这是因为在运动的时候产生了大量的乳酸堆积在肌肉，身体没来得及及时分解产生的酸胀感。可以通过按摩、泡热水、拉伸等方法缓解，一般情况下休息几天就可以恢复了，经过这一次的酸痛过后，其实接下来运动，就不容易产生酸痛了，可惜的是很多人这次恢复之后就放弃运动了。
+
+                </p>
+            </div>
+        </div>
+
+
+        <div class="z4">
+            <h1>四、大胆尝试</h1>
+            <div class="w4">
+                <p>运动有很多方法，但是没有条条框框。以前经常会发现有的教练会给一些刚运动的朋友，很多条条框框，这反而会让别人觉得运动有一种负担。当然这里并不是说运动就是可以乱来，而是说在一开始的时候，不要先设定太多规矩，其实我们可以一边运动一边学习正确的方法，不要试图一开始就做的十分完美正确，而是在运动的过程中慢慢的去改正，慢慢提升。这才是一种可持续的方法。所以刚开始运动就大胆点放开去吧。
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="last">
+        <h1>保持良好心态 积极享受每天</h1>
+
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2>切记不可着急</h2>
+                <p>刚开始锻炼的时候一定不能着急。</p>
+                <button
+                    onclick="window.location.href='https://baike.baidu.com/item/%E5%81%A5%E8%BA%AB%E8%BF%90%E5%8A%A8/10552233'">>查看更多</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>遵从身体的科学规律</h2>
+                <p>如果一个物体长期保持住某种状态，如果想要改变这种状态，要给他额外的做功</p>
+                <button
+                    onclick="window.location.href='https://baike.baidu.com/item/%E5%81%A5%E8%BA%AB%E8%BF%90%E5%8A%A8/10552233'">查看更多</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>不必过多的担忧</h2>
+                <p>你越使用它，它才会越来越强。</p>
+                <button
+                    onclick="window.location.href='https://baike.baidu.com/item/%E5%81%A5%E8%BA%AB%E8%BF%90%E5%8A%A8/10552233'">查看更多</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2>大胆尝试</h2>
+                <p>我们可以一边运动一边学习正确的方法，不要试图一开始就做的十分完美正确。</p>
+                <button
+                    onclick="window.location.href='https://baike.baidu.com/item/%E5%81%A5%E8%BA%AB%E8%BF%90%E5%8A%A8/10552233'">查看更多</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

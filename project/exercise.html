@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猛男养成日记之锻炼</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #111;
+            color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #111;
+        }
+
+        .dropdown:hover .dropdown-content {
+            z-index: 9999;
+            display: block;
+        }
+
+        .l1 {
+            float: left;
+        }
+
+        li a,
+        .l2 {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .l1:hover .l2 {
+            color: red;
+            background-color: #111;
+        }
+
+        li.l1 {
+            display: inline-block;
+        }
+
+        .l1-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .l1-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .l1-content a:hover {
+            background-color: #111;
+        }
+
+        .l1:hover .l1-content {
+            z-index: 9999;
+            display: block;
+        }
+
+        .container {
+            position: relative;
+            background: #aad5f6;
+        }
+
+        .slide-1 {
+            background: url('./锻炼/锻炼1.jpg');
+        }
+
+        .slide-2 {
+            background: url('./锻炼/锻炼2.jpg');
+        }
+
+        .slide-3 {
+            background: url('./锻炼/锻炼3.jpg');
+        }
+
+        .slide {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .caption {
+            background: rgba(0, 0, 0, 0.03);
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 40px 0px;
+        }
+
+        .container h3 {
+            color: #fff;
+            text-align: center;
+            font-size: 50px;
+            padding: 18px;
+        }
+
+        .container p {
+            max-width: 600px;
+            width: 90%;
+            margin: 0 auto;
+            color: #ccc;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.5em;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            transform: background 500ms;
+        }
+
+        .arrow img {
+            width: 50px;
+        }
+
+        .arrow:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .l {
+            left: 0;
+        }
+
+        .r {
+            right: 0;
+        }
+
+        @keyframes Myanim {
+            0% {
+                background-color: red;
+                width: 100px;
+                opacity: 0.0;
+            }
+
+            25% {
+                background-color: orange;
+                width: 200px;
+                opacity: 0.4;
+            }
+
+            50% {
+                background-color: yellow;
+                width: 100px;
+                opacity: 0.6;
+            }
+
+            75% {
+                background-color: green;
+                width: 200px;
+                opacity: 0.8;
+            }
+
+            100% {
+                background-color: aqua;
+                width: 100px;
+                opacity: 1;
+            }
+        }
+
+        .black a {
+            text-decoration: none;
+            color: black;
+            position: fixed;
+            right: 10px;
+            bottom: 25px;
+            background-image: url('顶部图标.webp');
+        }
+
+        .black img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .body1 h1 {
+            text-align: center;
+            height: 60px;
+        }
+
+        .body1 h2 {
+            text-align: center;
+        }
+
+        .zhou1 {
+            margin: auto;
+            text-align: center;
+            width: 800px;
+        }
+
+        .zhou1 img {
+            width: 800px;
+            height: 550px;
+        }
+
+        .zhou2 {
+            margin: auto;
+            text-align: center;
+            width: 800px;
+        }
+
+        .zhou2 img {
+            width: 800px;
+            height: 550px;
+        }
+
+        .zhou3 {
+            margin: auto;
+            text-align: center;
+            width: 800px;
+        }
+
+        .zhou3 img {
+            width: 800px;
+            height: 550px;
+        }
+
+        .zhou4 {
+            margin: auto;
+            text-align: center;
+            width: 800px;
+        }
+
+        .zhou4 img {
+            width: 800px;
+            height: 550px;
+        }
+
+        .zhou5 {
+            margin: auto;
+            text-align: center;
+            width: 800px;
+        }
+
+        .zhou5 img {
+            width: 800px;
+            height: 550px;
+        }
+
+        .zhou6 {
+            margin: auto;
+            text-align: center;
+            width: 800px;
+        }
+
+        .zhou6 img {
+            width: 800px;
+            height: 550px;
+        }
+
+        .last {
+            text-align: center;
+            background-color: rgb(118, 112, 112);
+            height: 1 00px;
+            ;
+        }
+
+        .shouye a {
+            text-decoration: none;
+            color: black;
+            position: fixed;
+            right: 10px;
+            bottom: 75px;
+            width: 35px;
+            height: 20px;
+            background-color: #fff;
+
+        }
+
+        .xintai a {
+            text-decoration: none;
+            color: black;
+            position: fixed;
+            right: 10px;
+            bottom: 110px;
+            width: 50sspx;
+            height: 20px;
+            background-color: #fff;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header id="exercise">
+        <nav>
+            <ul>
+                <li class="l1">
+                    <a href="javascript:void(0)" class="l2">用户</a>
+                    <div class="l1-content">
+                        <a href="login.html#form2">登录</a>
+                        <a href="login.html#form1">注册</a>
+                    </div>
+                </li>
+                <li><a href="fitness.html#fitness">撸铁</a></li>
+                <li><a href="cate.html#cate">饮食</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">爱好</a>
+                    <div class="dropdown-content">
+                        <a href="健身动作.html#czk">健身动作</a>
+                        <a href="movie.html#movie">电影</a>
+                        <a href="basketball.html#basketball">篮球</a>
+                    </div>
+                </li>
+                <li><a href="psychology.html#psychology">心态</a></li>
+                <li><a href="exercise.html#exercise">锻炼</a></li>
+                <li><a href="index.html#home">首页</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="arrow l" onclick="prev()">
+            <img src="./锻炼/l.png" alt="">
+        </div>
+        <div class="slide slide-1">
+            <div class="caption">
+                <h3>Exercise</h3>
+                <p>Keep Moving! </p>
+            </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="caption">
+                <h3>Breakthrough limit</h3>
+                <p>Life is always so much fun!</p>
+            </div>
+        </div>
+        <div class="slide slide-3">
+            <div class="caption">
+                <h3>Change Yourself</h3>
+                <p>No human is limited</p>
+            </div>
+        </div>
+        <div class="arrow r" onclick="next()">
+            <img src="./锻炼/r.png" alt="">
+        </div>
+    </div>
+    <script>
+        let slide = document.querySelectorAll('.slide');
+        var current = 0;
+
+        function cls() {
+            for (let i = 0; i < slide.length; i++) {
+                slide[i].style.display = 'none';
+            }
+        }
+
+        function next() {
+            cls();
+            if (current === slide.length - 1) current = -1
+            current++;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function () {
+                x += 0.1;
+                slide[current].style.opacity = x;
+                if (x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100)
+        }
+
+        function prev() {
+            cls();
+            if (current === 0) current = slide.length
+            current--;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function () {
+                x += 0.1;
+                slide[current].style.opacity = x;
+                if (x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100)
+        }
+
+        function start() {
+            cls();
+            slide[current].style.display = 'block';
+        }
+
+        start();
+
+
+
+
+    </script>
+    <div class="black"><a href="#"><img src="./锻炼/顶部图标.webp" alt=""></a></div>
+    <div class="body1">
+        <h1>猛男的一周</h1>
+        <h2>周一</h2>
+        <div class="zhou1">
+            <p>今天是新的一周的开始！根据你的时间安排和精神状态，可以选择早上、中午或晚上进行健身练习。早上可以选择运动强度不是很大，但却可以有效锻练腹肌、肱二头肌和臀部肌肉的举重练习。中午可以选择修身健体操，学习基本的街舞动作，在趣味中达到活动筋骨和消耗卡路里的目的。
+
+                下班后则可以选择运动强度极大的动感搏击操，通过激烈的动作来释放你身体的能量，最大限度的消耗卡路里。</p>
+
+            <img src="https://5b0988e595225.cdn.sohucs.com/images/20180716/7823862c57514dd48aab4b6dd564922a.jpeg"
+                alt="">
+        </div>
+        <h2>周二</h2>
+        <div class="zhou2">
+            <p>健身计划需要你的决心和毅力！如果周一你已经参加了举重练习、修身健身操或动感搏击操，并觉得其中有一项特别适合你的口味，那就请留意这项运动在周二的时间安排。或者你想试一下新的健身运动，如动感桑巴或踏板舞。</p>
+            <img src="https://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0731%2Fc707976cp00qx3md0004xc000hs00ckg.png&thumbnail=660x2147483647&quality=80&type=jpg"
+                alt="">
+        </div>
+        <h2>周三</h2>
+        <div class="zhou3">
+            <p>由于你的肌肉在过去两天都处于极度兴奋和紧张的状态，今天不妨休息一天，给身体放个假。同时注意调整自己的呼吸，运用腹部呼吸法可以有效消耗腹部的卡路里，并且随时随地都可以进行。</p>
+            <img src="https://img0.baidu.com/it/u=552385702,1363763173&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800"
+                alt="">
+        </div>
+        <h2>周四</h2>
+        <div class="zhou4">
+            <p>转眼后天就到周末了，今天也要加油呢！去健身房参加自己喜欢的运动，或是尝试一下新的拉丁舞或中级踏板舞。请记住 “兴趣” 是最大的老师，身体的本能是懒惰的，这就需要你的意志来战胜懒惰！</p>
+            <img src="https://img0.baidu.com/it/u=3865298094,4276701091&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=334"
+                alt="">
+        </div>
+        <h2>周五</h2>
+        <div class="zhou5">
+            <p>还有一天你的一周健身计划就可以完成了！建议今天下班后去健身房参加动感搏击操，最大限度的消耗你在一周里囤积的卡路里，同时达到释放压力的目的。运动结束后冲个澡，就可以精神抖擞的参加晚上的party了。</p>
+            <img src="https://img0.baidu.com/it/u=3326180664,1649706126&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800"
+                alt="">
+        </div>
+        <h2>周末</h2>
+        <div class="zhou6">
+            <p>周末是身体休养生息的好时机。可以通过快步走、腹部呼吸和床上运动等培养在日常生活中健身的好习惯。</p>
+            <img src="https://img2.baidu.com/it/u=1079968839,1189469801&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+                alt="">
+        </div>
+        <div class="last">
+            <h1>Keep Moving</h1>
+            <h2>No human is limited</h2>
+        </div>
+    </div>
+    <div class="shouye"><a href="index.html">首页</a></div>
+    <div class="xintai"><a href="psychology.html">下一站</a></div>
+</body>
+
+</html>

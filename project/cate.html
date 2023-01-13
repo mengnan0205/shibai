@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猛男养成日记之饮食</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">
+    <style>
+        body {
+            margin: 0px;
+            background-color: antiquewhite;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #111;
+            color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #111;
+        }
+
+        .dropdown:hover .dropdown-content {
+            z-index: 9999;
+            display: block;
+        }
+
+        .l1 {
+            float: left;
+        }
+
+        li a,
+        .l2 {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .l1:hover .l2 {
+            color: red;
+            background-color: #111;
+        }
+
+        li.l1 {
+            display: inline-block;
+        }
+
+        .l1-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .l1-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .l1-content a:hover {
+            background-color: #111;
+        }
+
+        .l1:hover .l1-content {
+            z-index: 9999;
+            display: block;
+        }
+
+
+
+        .swiper {
+            max-width: 60%;
+            height: 500px;
+            margin: 50px auto;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: turquoise;
+            width: 20px;
+            height: 20px;
+
+        }
+
+        div.title {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        div.bmmt {
+            display: block;
+            text-align: center;
+            border: 10px;
+            padding: 100px 350px;
+        }
+
+        .bmmt img {
+            float: left;
+            max-width: 30%;
+            height: auto;
+        }
+
+        .p1 {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .p1::first-letter {
+            color: #ff0000;
+            font-size: 50px;
+        }
+
+        .p2 {
+            text-align: left;
+            color: #000;
+            font-size: 20px;
+        }
+
+        div.bmb {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            border: 10px;
+            padding: 100px 350px;
+        }
+
+        .bmb img {
+            float: left;
+            max-width: 30%;
+            height: auto;
+        }
+
+        div.jxr {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            border: 10px;
+            padding: 100px 350px;
+        }
+
+        .jxr img {
+            float: left;
+            max-width: 30%;
+            height: auto;
+        }
+
+        div.jsc {
+            margin-top: 200px;
+            text-align: center;
+            border: 1px solid #ccc;
+
+        }
+
+        .jsc img {
+            max-width: 30%;
+            height: 300px;
+            margin-top: 50px;
+        }
+
+        .p3 {
+            color: #000;
+            font-size: 25px;
+        }
+
+        footer {
+            background-color: #333;
+            margin-top: 20px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        .top a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .top a:hover {
+            color: #ff0000;
+        }
+
+        .down a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .down a:hover {
+            color: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="cate">
+        <nav>
+            <ul>
+                <li class="l1">
+                    <a href="javascript:void(0)" class="l2">用户</a>
+                    <div class="l1-content">
+                        <a href="login.html#form2">登录</a>
+                        <a href="login.html#form2">注册</a>
+                    </div>
+                </li>
+                <li><a href="fitness.html#fitness">撸铁</a></li>
+                <li><a class="active" href="cate.html#cate">饮食</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">爱好</a>
+                    <div class="dropdown-content">
+                        <a href="健身动作.html#czk">健身动作</a>
+                        <a href="movie.html#movie">电影</a>
+                        <a href="basketball.html#basketball">篮球</a>
+                    </div>
+                </li>
+                <li><a href="psychology.html#psychology">心态</a></li>
+                <li><a href="exercise.html#exercise">锻炼</a></li>
+                <li><a href="index.html#home">首页</a></li>
+            </ul>
+        </nav>
+    </header>
+    <mian>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="美食/牛肉1.jpg" alt="1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="美食/牛肉2.jpg" alt="2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="美食/鸡胸肉.jpg" alt="3" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="title">
+            <h1>成为猛男三部曲之饮食</h1>
+        </div>
+        <div class="bmmt">
+            <p class="p1">第一步我们吃他们的</p>
+            <p class="p1">白面馒头</p>
+            <img src="美食/白面馒头.jpg">
+            <p class="p2">白面馒头的优点有升糖快方便好吃便宜没有科技与狠活</p>
+            <p class="p2">缺点是不能放当天买当天吃，放到第二天吃的话就发干了，第三天就发柴了，第四天那就发霉了</p>
+        </div>
+        <div class="bmb">
+            <p class="p1">第二步我们吃他们的</p>
+            <p class="p1">白面包</p>
+            <img src="美食/白面包.jpg">
+            <p class="p2">大家在选择白面包的时候一定要选择小麦粉，还有脂肪含量越低越好，脂肪含量太高了你会不经意间摄入很多的
+                脂肪，容易越来越胖。
+            </p>
+        </div>
+        <div class="jxr">
+            <p class="p1">第三步我们吃他们的</p>
+            <p class="p1">鸡胸肉</p>
+            <img src="美食/鸡胸肉1.jpg">
+            <p class="p2">鸡胸肉包含了人体肌肉生长所需要的所有必须氨基酸，100克鸡胸肉大概含30克蛋白质</p>
+        </div>
+        <div class="jsc">
+            <div class="p3">健身餐</div>
+            <img src="美食/健身餐1.png">
+            <img src="美食/健身餐2.png">
+            <img src="美食/健身餐3.png">
+            <img src="美食/健身餐4.png">
+        </div>
+    </mian>
+    <footer>
+        <div id="totop" class="top">
+            <a href="javascript:;" id="btn">顶部</a>
+        </div>
+        <div class="down">
+            <a href="index.html#home">回到首页</a>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        window.onload = function () {
+            var totop = document.getElementById("btn");
+            totop.style.display = "none";
+            var timer = null;
+
+            totop.onclick = function () {
+
+                timer = setInterval(function () {
+
+                    var backTop = document.documentElement.scrollTop ||
+                        document.body.scrollTop;
+
+                    speedTop = backTop / 5;
+                    document.documentElement.scrollTop = backTop - speedTop;
+                    if (backTop == 0) {
+                        clearInterval(timer);
+                    }
+                }, 30)
+            }
+
+            var pageHeight = 700;
+            window.onscroll = function () {
+                var backTop = document.documentElement.scrollTop ||
+                    document.body.scrollTop;
+                if (backTop > pageHeight) {
+                    totop.style.display = "block";
+                } else {
+                    totop.style.display = "none";
+                }
+
+            }
+        }
+
+    </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>
+    <script>
+        var mySwiper = new Swiper(".swiper", {
+            autoplay: {
+                delay: 2000,
+            },
+            loop: true,
+            effect: 'cards',
+
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>

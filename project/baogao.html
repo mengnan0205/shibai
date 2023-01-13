@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>报告</title>
+    <style>
+        body {
+            margin-top: 0px;
+            background-color: rgb(228, 228, 228);
+        }
+
+        header img {
+            max-width: 30%;
+            height: auto;
+        }
+
+        header div.mengnan {
+            text-align: center;
+            margin-top: 100px;
+            -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+            filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 88px;
+            margin-top: 100px;
+        }
+
+        .box1 {
+            clear: none;
+            overflow: auto;
+            position: absolute;
+            right: 20%;
+            background-color: rgb(255, 247, 234);
+            width: 60%;
+            height: 5000px;
+            margin-top: 20px;
+            text-align: center;
+            -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+            filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+        }
+
+        table {
+
+            border-collapse: collapse;
+            width: 40%;
+            margin: 0 auto;
+            margin-top: 180px;
+        }
+
+
+        td {
+            vertical-align: bottom;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr td:hover {
+            background-color: #f5f5f5;
+        }
+
+        .p1 {
+            font-size: 50px;
+            font-weight: 500;
+        }
+
+        .p2 {
+            font-size: 35px;
+        }
+
+        .p3 {
+            font-size: 18px
+        }
+
+        /* 引用字体库 */
+        @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+        @import url("https://fonts.googleapis.com/css?family=Teko:700");
+
+        /* sample 的整体样式 */
+        .sample {
+            position: relative;
+            color: #ffffff;
+            /* 控制字体颜色 */
+            display: inline-block;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 16px;
+            margin: 10px 5px;
+            max-width: 330px;
+            min-width: 230px;
+            overflow: hidden;
+            text-align: right;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        .sample *,
+        .sample *:before,
+        .sample *:after {
+            box-sizing: border-box;
+            transition: all 0.45s ease;
+        }
+
+        .sample:before,
+        .sample:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: "";
+            opacity: 0.5;
+            transition: all 0.45s ease;
+            background-color: #b84712;
+        }
+
+        .sample:before {
+            transform: skew(30deg) translateX(80%);
+
+        }
+
+        .sample:after {
+            transform: skew(-30deg) translateX(70%);
+        }
+
+
+        .sample img {
+            backface-visibility: hidden;
+            max-width: 100%;
+            vertical-align: top;
+        }
+
+
+        .sample figcaption {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            padding: 20px 20px 20px 40%;
+
+            z-index: 1;
+        }
+
+        .sample figcaption:before,
+        .sample figcaption:after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            content: "";
+            opacity: 0.5;
+            z-index: -1;
+            background-color: #b84712;
+        }
+
+
+        .sample figcaption:before {
+            transform: skew(30deg) translateX(100%);
+        }
+
+        .sample figcaption:after {
+            transform: skew(-30deg) translateX(90%);
+        }
+
+
+        .sample h3,
+        .sample p {
+            margin: 0;
+            opacity: 0;
+            letter-spacing: 1px;
+
+        }
+
+        .sample h3 {
+            font-family: 'Teko', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+
+        .sample p {
+            font-size: 0.9em;
+        }
+
+
+        .sample:hover h3,
+        .sample:hover p,
+        .sample.hover h3,
+        .sample.hover p {
+            transform: translateY(0);
+            opacity: 0.9;
+        }
+
+        .sample:hover:before,
+        .sample.hover:before {
+            transform: skew(30deg) translateX(30%);
+            transition-delay: 0.05s;
+        }
+
+        .sample:hover:after,
+        .sample.hover:after {
+            transform: skew(-30deg) translateX(20%);
+
+        }
+
+        .sample:hover figcaption:before,
+        .sample.hover figcaption:before {
+            transform: skew(30deg) translateX(50%);
+            transition-delay: 0.15s;
+        }
+
+        .sample:hover figcaption:after,
+        .sample.hover figcaption:after {
+            transform: skew(-30deg) translateX(40%);
+            transition-delay: 0.1s;
+        }
+
+        .video {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <header>
+            <div class="mengnan">
+                <img src="报告\财大标志+logo.png">
+            </div>
+            <h1>学生作业报告</h1>
+            <table>
+                <tr>
+                    <td>学院：</td>
+                    <td>软件与物联网工程学院</td>
+                </tr>
+                <tr>
+                    <td>课程名称：</td>
+                    <td>Web开发基础</td>
+
+                </tr>
+                <tr>
+                    <td>专业班级：</td>
+                    <td>软件2211班</td>
+                </tr>
+                <tr>
+                    <td>组员姓名：</td>
+                    <td>学号：</td>
+                </tr>
+                <tr>
+                    <td>艾泽阳</td>
+                    <td>0223707</td>
+                </tr>
+                <tr>
+                    <td>范佳豪</td>
+                    <td>0223717</td>
+                </tr>
+                <tr>
+                    <td>陈志凯</td>
+                    <td>0223406</td>
+                </tr>
+            </table><br><br>
+            <p class="p1">网站介绍</p>
+            <p class="p2">名称：猛男养成日记</p>
+            <p class="p2">目的：立志成为猛男，不当细狗！！！</p>
+        </header><br>
+        <main>
+            <p class="p1">网站设计</p>
+            <figure class="sample">
+                <img src="./报告/二级导航栏.png" alt="sample1" height="220vh" />
+                <figcaption>
+                    <h3>二级导航栏</h3>
+                    <p>当用户将鼠标移到元素上时出现的下拉框鼠标悬浮于下拉框时下拉框不会消失</p>
+                </figcaption>
+            </figure>
+
+            <figure class="sample">
+                <img src="./报告/文字悬浮于图片.png" alt="sample2" height="220vh" />
+                <figcaption>
+                    <h3>文字悬浮于图片</h3>
+                    <p>利用了relative和absolute元素实现</p>
+                </figcaption>
+            </figure>
+
+            <figure class="sample">
+                <img src="./报告/侧边栏.png" alt="sample3" height="220vh" />
+                <figcaption>
+                    <h3>侧边栏</h3>
+                    <p>使用fixed元素相对视口定位实现侧边栏功能</p>
+                </figcaption>
+            </figure>
+            <figure class="sample">
+                <img src="./报告/伪元素.png" alt="sample3" height="220vh" />
+                <figcaption>
+                    <h3>伪元素</h3>
+                    <p>利用::first-letter 伪元素用于向文本的首字母添加特殊样式</p>
+                </figcaption>
+            </figure>
+            <div class="video">
+                <h1>两种样式的轮播图</h1>
+                <iframe src="//player.bilibili.com/player.html?aid=265226878&bvid=BV1DY411y7VW&cid=963737268&page=1"
+                 scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> 
+                </iframe>
+                <iframe src="//player.bilibili.com/player.html?aid=947731967&bvid=BV1sW4y137th&cid=963748164&page=1"
+                    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+                </iframe>
+            </div>
+            <div class="video">
+                <h1>炫酷的图片展示效果</h1>
+                <iframe src="//player.bilibili.com/player.html?aid=222733053&bvid=BV148411N7Mp&cid=963741082&page=1"
+                    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                <iframe src="//player.bilibili.com/player.html?aid=905210056&bvid=BV1UP4y1r7oe&cid=963899197&page=1"
+                    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+            </div>
+            <div class="video">
+                <h1>通过js实现回到顶部的动画效果</h1>
+                <iframe src="//player.bilibili.com/player.html?aid=265165808&bvid=BV1aY411y7FW&cid=963898411&page=1"
+                    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="500vw"
+                    height="300vh"> </iframe>
+            </div>
+            <div class="video">
+                <h1>登录注册界面</h1>
+                <p>使用js使点击sign in/sign up可以在登录注册界面切换，同时背景图片丝滑的自动切换</p>
+                <p>(视频时提前录的，后面加了返回首页的按钮)</p>
+                <iframe src="//player.bilibili.com/player.html?aid=480197576&bvid=BV1fM411F7B2&cid=963988904&page=1"
+                    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="500vw"
+                    height="300vh"> </iframe>
+            </div><br>
+            <div>
+                <p class="p1">网站内容</p>
+                <P class="p3">使用了html、css和js编写</P>
+                <p class="p3">实现了导航栏、二级导航栏、侧边栏、轮播图、图片展示功能及利用js实现了一些简单流畅的动画</p>
+                <p class="p3">还做了一些阴影效果、背景颜色及文本的大小和位置等使得整体较为简洁</p>
+                <p class="p3">所有的子网页可以通过导航栏和页脚的十一个选项进行跳转</p>
+            </div>
+            <div style="margin-top:80px ;">
+                <p class="p2">遇到的问题</p>
+                <p>小组在制作轮播图时一开始打算用html和css实现，试过之后发现轮播功能实现不了</p>
+                <p>然后小组成员通过学习使用js实现轮播功能</p>
+                <p>过程中还学会了用swiper插件</p>
+            </div>
+            <div class="video">
+                <p class="p1">亮点</p>
+                <p>部分页面做了响应式设计，使用了float+clear布局，position定位（absolute, fixed)，伪类，伪元素，表格table, 图片img, 列表ul</p>
+                <p>以及利用js和css实现的各种漂亮的动效，例如<img src="报告\流光按钮.png" width="120" height="70" /></p>
+            </div>
+            <div class="video">
+                <p class="p1">总结</p>
+                <p>我们小组三人通过学习和努力，终于完成了这几千行代码，且完成的效果还算不错吧。</p>
+                <p>对此，我非常感谢我们小组组员为此的辛苦付出以及老师的大力帮助。</p>
+                <p>同时我们也明白我们在web的学习上面还有许多地方的不足，在制作网页的过程中总是遇到不会、不明白的地方。</p>
+                <p>所以我们会继续努力，争取下一次做出一个更为完善的网站</p>
+                <p>最后，再次衷心感谢小组成员共同的努力以及老师的帮助！</p>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+    </script>
+</body>
+
+</html>

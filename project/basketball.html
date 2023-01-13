@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猛男爱好之篮球</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            margin-top: 0px;
+            margin: 0px;
+
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #111;
+            color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #111;
+        }
+
+        .dropdown:hover .dropdown-content {
+            z-index: 9999;
+            display: block;
+        }
+
+        .l1 {
+            float: left;
+        }
+
+        li a,
+        .l2 {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover,
+        .l1:hover .l2 {
+            color: red;
+            background-color: #111;
+        }
+
+        li.l1 {
+            display: inline-block;
+        }
+
+        .l1-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .l1-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .l1-content a:hover {
+            background-color: #111;
+        }
+
+        .l1:hover .l1-content {
+            z-index: 9999;
+            display: block;
+        }
+
+
+        .f1 {
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            text-align: right;
+            float: right;
+        }
+
+        .a1 {
+            float: left;
+        }
+
+        .a1 a {
+            margin: 0px;
+            border: 0px;
+            padding: 0px;
+            color: #000;
+            float: left;
+        }
+
+        .a1 a:hover {
+            color: red;
+            background-color: #f1f1f1;
+        }
+
+        div.fixed {
+            background-color: #f1f1f1;
+            position: fixed;
+            bottom: 0;
+            top: 49px;
+            left: 0px;
+            width: 19%;
+            border: 3px solid #f1f1f1;
+        }
+
+        div.box1 {
+            float: right;
+            background-color: #f9f9f9;
+            width: 20%;
+            height: 2400px;
+            border: 15px solid #f9f9f9;
+            padding: 50px;
+            margin: 20px;
+        }
+
+        div.box2 {
+            clear: none;
+            overflow: auto;
+            position: relative;
+            background-color: #f9f9f9;
+            top: 20px;
+            left: 20%;
+            width: 40%;
+            height: 2400px;
+            border: 15px solid #f9f9f9;
+            padding: 50px;
+            margin: 20px;
+        }
+
+        .c2 {
+            clear: none;
+            text-align: left;
+            -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+            filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+        }
+    </style>
+</head>
+
+<body>
+    <header id="basketball">
+        <nav>
+            <ul>
+                <li class="l1">
+                    <a href="javascript:void(0)" class="l2">用户</a>
+                    <div class="l1-content">
+                        <a href="login.html#form2">登录</a>
+                        <a href="login.html#form1">注册</a>
+                    </div>
+                </li>
+                <li><a href="fitness.html#fitness">撸铁</a></li>
+                <li><a href="cate.html#cate">饮食</a></li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">爱好</a>
+                    <div class="dropdown-content">
+                        <a href="健身动作.html#czk">健身动作</a>
+                        <a href="movie.html#movie">电影</a>
+                        <a href="basketball.html#basketball">篮球</a>
+                    </div>
+                </li>
+                <li><a href="psychology.html#psychology">心态</a></li>
+                <li><a href="exercise.html#exercise">锻炼</a></li>
+                <li><a href="index.html#home">首页</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="./篮球/new1.jpg" width="80%" height="800px" class="f1">
+        <div class="fixed">
+            <h1>目录</h1>
+            <ol>
+
+                <li class="a1"><a href="#1">科比</a></li>
+                <br>
+
+                <li class="a1"><a href="#2">詹姆斯</a></li>
+                <br>
+
+                <li class="a1"><a href="#3">杜兰特</a></li>
+                <br>
+
+                <li class="a1"><a href="#4">库里</a></li>
+                <br>
+            </ol>
+        </div>
+        <div class="box1">
+            <h1 style="text-align: center;">NBA历史</h1>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&NBA一共有30支球队分为东部联盟和西部联盟，每个联盟又被划分为3个赛区，各赛区由5支球队组成。
+                NBA每年赛季结束后，下赛季开始前会举行NBA选秀，选秀后有各球队新秀夏季联赛，每年10月份新赛季常规赛开始前举行若干场季前赛，（包括NBA海外赛和NBA中国赛）
+            </p>
+            <img src="./篮球/nba.jpg" width="200px" height="150px" style="float: right;">
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp美职篮于1946年6月6日在纽约成立，莫里斯-波多洛夫为联赛第一任主席，他的名字被印在联盟MVP奖杯上。联盟成立之初只有十一支球队 [1]
+                ，其中只有3支球队一直延续至今，他们分别是勇士、尼克斯和凯尔特人，其余8支球队都在5年内先后解散 [8]
+                。1946年6月6日，NBA的前身BAA在美国成立，这一切缘起于十一家冰球馆与体育馆的老板不希望在没有相关比赛的时候闲置自己的场馆，出于这个目的，美国篮球联盟就应运而生了 [9]
+                。当时的11支球队虽然也是分为东西部（东部6支，西部5支），但东西部各自只有3支球队晋级季后赛。季后赛的赛制也非常怪异，若按常理，最好的球队能在最后碰面，可是BAA的管理层却把东部第一的华盛顿国会与西部第一的芝加哥牡鹿直接分在了一起，打7战4胜制的比赛，另外4支球队，先是进行一轮3局2胜的淘汰赛，东部第二的球队首轮对阵西部第二的球队，东部第三的球队首轮对阵西部第三的球队
+                [8] 。</p>
+            1947-1956
+            在史前篮球时代，人们普遍认为小个子比大个子更适合打篮球。但是在当时以乔治·麦肯为代表的大个子们的出现，有力地打击了人们的质疑，麦肯的到来意味良多：NBA的球员高大化、NBL的消亡，以及联盟首个王朝（明尼亚波利斯湖人）的出现
+            [10] 。1950-51赛季，“糖水”奈特-克里夫顿成为第一个和NBA签约的黑人球员，该赛季，克里夫顿场均贡献8分6个篮板
+            1967-1976
+            NBA开始逐步向多元化发展，在这十年里，共有九支不同的球队曾站在过总决赛的赛场上，虽然波士顿凯尔特人和洛杉矶湖人在这一时期依旧是最闪耀的主角，但是这种均势已经在很大程度上被打破。而且诸如76人、雄鹿、勇士、老鹰等这些历史比较悠久的球队也都是在这个时期里分别落户在现在所在的主场城市的。1977-1981
+            NBA继史前时期拉塞尔与张伯伦的博弈之后又迎来了新一轮的双煞对决，他们两个一个叫埃尔文-约翰逊，一个叫拉里-伯德。他们两个在上世纪八十年代率领各自的球队为我们奉献了一次又一次堪称经典的巅峰对决
+        </div>
+
+        <div class="box2">
+
+            <h1 id="1">1.科比</h1>
+            <br>
+            <img src="./篮球/kb2.jpg" style="float: right;" width="300px">
+            <p class="c2">
+                科比·布莱恩特（Kobe Bryant，1978年8月23日—2020年1月26日），全名科比·比恩·布莱恩特·考克斯（Kobe Bean Bryant
+                Cox），出生于美国宾夕法尼亚州费城，美国已故篮球运动员，司职得分后卫/小前锋。 [5] [24] [84]
+                1996年NBA选秀，科比于第1轮第13顺位被夏洛特黄蜂队选中并被交易至洛杉矶湖人队，整个NBA生涯都效力于洛杉矶湖人队；共获得5次NBA总冠军、1次NBA常规赛MVP、2次NBA总决赛MVP、4次NBA全明星赛MVP、2次NBA赛季得分王；共入选NBA全明星首发阵容18次、NBA最佳阵容15次（其中一阵11次、二阵2次、三阵2次）、NBA最佳防守阵容12次（其中一阵9次、二阵3次）。
+                [9] [24]
+                2007年，科比首次入选美国国家男子篮球队，后帮助美国队夺得2007年美洲男篮锦标赛金牌、2008年北京奥运会男子篮球金牌以及2012年伦敦奥运会男子篮球金牌。 [91]
+                2015年11月30日，科比发文宣布将在赛季结束后退役。 [100] 2017年12月19日，湖人队为科比举行球衣退役仪式。 [22] 2020年4月5日，科比入选奈·史密斯篮球名人纪念堂。 [7]
+                美国时间2020年1月26日（北京时间2020年1月27日），科比因直升机事故遇难，享年41岁
+            </p>
+            <br>
+            <h1 id="2">2.詹姆斯</h1>
+            <br>
+            <img src="./篮球/new2.jpg" style="float: right;" width="300px">
+            <p class="c2">
+                勒布朗·詹姆斯（LeBron James），全名勒布朗·雷蒙·詹姆斯（LeBron Raymone
+                James），1984年12月30日出生于美国俄亥俄州阿克伦，美国职业篮球运动员，司职小前锋，效力于NBA洛杉矶湖人队。 [1] [6] [13] [152]
+                勒布朗·詹姆斯在2003年NBA选秀中于首轮第1顺位被克利夫兰骑士队选中，在2009年与2010年蝉联NBA常规赛最有价值球员（MVP）。2010年，詹姆斯转会至迈阿密热火队。2012年，詹姆斯得到NBA个人生涯的第3个常规赛MVP，第1个总冠军以及总决赛MVP，并代表美国男篮夺得了伦敦奥运会金牌，追平了迈克尔·乔丹在1992年所创的纪录。2013年，詹姆斯夺得第4个常规赛MVP、第2个NBA总冠军和第2个总决赛MVP，实现两连冠。2014年，詹姆斯回归骑士队。2016年，詹姆斯带领骑士队逆转战胜卫冕冠军金州勇士队夺得队史首个总冠军和个人第3个总决赛MVP。2018年7月10日，詹姆斯正式与洛杉矶湖人队签下4年1.53亿美元的合同。2019-20赛季，詹姆斯当选NBA助攻王并带领湖人队夺得第17次总冠军，个人第4个总冠军以及个人第4个总决赛MVP。
+                [2]
+                勒布朗·詹姆斯篮球智商极高、突破犀利，拥有出色的视野和传球技术，被认为是NBA有史以来最为全能的球员之一。</p>
+            <br>
+            <h1 id="3">3.杜兰特</h1>
+            <br>
+            <p class="c2">
+                凯文·杜兰特（Kevin Durant），全名凯文·韦恩·杜兰特（Kevin Wayne
+                Durant），1988年9月29日出生于美国华盛顿哥伦比亚特区，美国职业篮球运动员，司职小前锋，现效力于NBA布鲁克林篮网队。 [14] [162] [209]
+                2007年NBA选秀，凯文·杜兰特在首轮第二顺位被西雅图超音速队（现俄克拉荷马城雷霆队）选中，2008年随球队搬迁到俄克拉荷马州。2014年同时荣膺NBA得分王与常规赛MVP。2016年7月4日，杜兰特加盟金州勇士队。2017年6月13日，勇士总比分4-1击败骑士，夺得2016-17赛季NBA总冠军，杜兰特收获生涯首冠，并荣膺总决赛MVP
+                [2] 。2018年4月，杜兰特获《时代周刊》2018年全球最具影响力人物荣誉。 [3] 2018年6月9日，杜兰特随勇士队再次夺得NBA总冠军并再次荣膺2017-18赛季总决赛MVP。 [4-5]
+                2017-18赛季，杜兰特荣获年度社区贡献奖。 [6] 2019年2月，杜兰特第二次夺得NBA全明星MVP。 [7] 5月，杜兰特入选2018-19赛季NBA最佳阵容二阵。 [8]
+                2019年6月27日，杜兰特选择不执行2019-20赛季的球员选项并成为一名完全自由球员。 [9] 7月2日，勇士队老板乔·拉科布宣布将退役杜兰特的35号球衣。 [10] 7月8日，杜兰特签约布鲁克林篮网队。
+                [1] 2021年10月，杜兰特入选NBA75大巨星。 [245]
+                2010年土耳其世锦赛，凯文·杜兰特带领美国队夺得冠军并当选MVP。 [234] 2012年伦敦奥运会、2016年里约奥运会以及2020年东京奥运会，杜兰特帮助美国男篮三夺金牌。 [168]
+                [237-238]
+            </p>
+            <br>
+            <h1 id="4">4.库里</h1>
+            <br>
+            <img src="./篮球/库里.jpg" style="float: right;" width="300px">
+            <p class="c2">
+                斯蒂芬·库里（Stephen Curry），全名沃德尔·斯蒂芬·库里二世（Wardell Stephen Curry
+                II），1988年3月14日出生于美国俄亥俄州阿克伦，美国职业篮球运动员，司职控球后卫，效力于NBA金州勇士队。 [1-2] [331]
+                斯蒂芬·库里于2009年通过选秀进入NBA后一直效力于金州勇士队，新秀赛季入选最佳新秀第一阵容；2014-15、2016-17、2017-18赛季、2021-22赛季四次夺得NBA总冠军，并于2021-22赛季当选总决赛MVP（FMVP）；
+                [399] 两次荣膺常规赛MVP；2015-16、2020-21赛季两次荣膺常规赛得分王；2021-22赛季荣膺西部决赛MVP； [308] [381] 8次入选最佳阵容（4次一阵、3次二阵、1次三阵）；
+                [310] [379] 8次入选全明星首发阵容，2021年10月入选NBA75大巨星，12月成为NBA历史三分王，2022年荣膺全明星正赛MVP。 [344] [362] [365] [383]
+                斯蒂芬·库里于2010年随美国队获土耳其世锦赛冠军，2014年随美国队获西班牙篮球世界杯冠军。2019福布斯100名人榜，斯蒂芬·库里排名第23位。 [5]
+            </p>
+            <br>
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
